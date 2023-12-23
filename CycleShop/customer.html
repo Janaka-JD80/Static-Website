@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<link href="style.css" rel="Stylesheet" type="text/css"/>
+	<script src="script.js"></script>
+	</head>
+	<body onload="setFocus();" style="background-color:#00415a" id="cusbody">
+<h1 align="center" style="color:black;font-size:40pt;">Customer Details</h1>
+<div id="divCustomer">
+<b>
+	<form Name="dataform" method="post" onsubmit="return Empty();" onreset="clean();setFocus()">
+	
+	<table cellspacing="20px;">
+	
+	<tr>
+		<td class="hud">Name<span>*</span>:</td>
+		<td><input type="text" name="name" id="cusname" size="40" onchange="return brand();"/></td>
+		<td><div id="err"></div></td>
+	</tr>
+	
+	<tr>
+		<td class="hud">Address:</td>
+		<td><textarea name="address" id="add" rows="4" cols="60" style="text-align:middle"></textarea></td>
+		<td><div id="divadd"></div></td>
+		
+	</tr>
+	
+	<tr>
+		<td class="hud">Gender:</td>
+		<td><input type="radio" name="gender" id="male" value="M"/> Male
+		<input type="radio" name="gender" value="F" id="female"/> Female</td>
+		<td><div id="divgen"></div></td>
+	</tr>
+	
+	<tr>
+	<td class="hud">Telephone<span>*</span>:</td>
+	<td><input type="Number" name="tp" size="10"id="tps" maxlength="10" onchange="return valid();"/></td>
+	<td><div id="errmsg"></div></td>
+	</tr>
+
+	<tr>
+	<td class="hud">E-mail<span>*</span>:</td>
+	<td><input type="email" name="em"/></td>
+	<td><div id="dmail"></div></td>
+	</tr>
+	
+	<tr>
+		<td class="hud">Brand:</td>
+		<td><input type="Checkbox" name="Brand[]" id="ds" value="DSI"/>DSI
+		<input type="Checkbox" name="Brand[]" value="Lumala" id="lm">Lumala
+		<input type="Checkbox" name="Brand[]" value="Kington" id="kg"/>Kington</td>
+		<td><div id="dml"></div></td>
+	</tr>
+			
+	<tr>
+	<td class="hud">Type:</td>
+	<br>
+	
+	<td><select name="Cycle" id="selectNumber" >
+			<option >Cruiser </option>
+			<option >Strider</option>
+			<option >Blaze</option>
+			<option >Dominator</option>
+			<option >Phantom</option>
+			
+			</select></td>
+	</tr>
+	 
+	
+	</table>
+	
+		<div id="well"></div>
+	
+	
+			<input type="submit" name="sub" value="Submit"/>
+			<input type="reset" name="res" value="Reset"/>
+		
+		
+	</form>
+		
+	</b>
+	</div>
+	<div id="divbot"></div>
+	
+	
+	</body>
+</html>
